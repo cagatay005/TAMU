@@ -2,7 +2,7 @@ name: TAMU Günlük Otomasyon
 
 on:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '0 1 * * *' # UTC 01:00 -> TSİ 04:00'da çalışır (Küresel trafiğin en düşük olduğu saat)
   workflow_dispatch:
 
 jobs:
