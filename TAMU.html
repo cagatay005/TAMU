@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TAMU — Bağımsız habercilik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#E7E1C4;font-family:"Lora",Georgia,serif;color:#262820;-webkit-font-smoothing:antialiased}
+a{color:#4A5233}
+a:hover{color:#262820}
+button{font-family:inherit}
+input,textarea,select{font-family:inherit}
+*:focus-visible{outline:2px solid #4A5233;outline-offset:2px}
+</style>
+</head>
+<body>
+
+<div id="sayfa" style="max-width:1320px;margin:0 auto;background:#FEFAE0;position:relative">
+
+<a href="#icerik" style="position:absolute;left:-9999px;top:0;background:#262820;color:#FEFAE0;padding:10px 16px;z-index:90;text-decoration:none">İçeriğe atla</a>
+
+<!-- ORNEK_ICERIK_BANDI: yayına alırken bu blok kaldırılır -->
+<div style="display:flex;gap:10px;align-items:flex-start;padding:9px 3%;background:#B99470;border-bottom:1px solid #262820;font-size:13.5px;line-height:1.45">
+  <span style="font-weight:700">Örnek içerik</span>
+  <span>Bu sayfadaki tüm başlıklar, metinler ve kaynak kayıtları tasarım amaçlı örneklerdir; doğrulanmış habercilik değildir.</span>
+</div>
+
+<header style="background:#FEFAE0">
+  <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:8px 3%;font-size:14px;color:#5C5F50;border-bottom:1px solid #DED8B8">
+    <!-- TARIH -->
+    <span id="ust-tarih">Pazartesi, 21 Eylül 2026</span>
+    <div style="display:flex;gap:18px;align-items:center">
+      <a href="/ara" style="color:#4A5233;text-decoration:none;border-bottom:1px solid #C0C78C">Ara</a>
+      <a href="/kitaplik" style="color:#4A5233;text-decoration:none;border-bottom:1px solid #C0C78C">Kaydedilenler</a>
+      <a href="/giris" style="color:#4A5233;text-decoration:none;border-bottom:1px solid #C0C78C">Giriş yap</a>
+    </div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between;padding:26px 3% 20px">
+    <div>
+      <div style="font-size:54px;font-weight:700;letter-spacing:.14em;line-height:1">TAMU</div>
+      <div style="margin-top:8px;font-size:15px;font-style:italic;color:#5C5F50">Bağımsız habercilik — iddia, kaynak ve yorum ayrı ayrı.</div>
+    </div>
+    <div style="max-width:300px;font-size:14px;line-height:1.5;color:#5C5F50;border-left:2px solid #B99470;padding-left:14px">Her olgusal yazının kaynakçası açıktır; değişiklikler tarihiyle birlikte yayımlanır.</div>
+  </div>
+  <nav style="border-top:1px solid #262820;border-bottom:1px solid #262820;padding:0 3%">
+    <div style="display:flex;flex-wrap:wrap;gap:4px">
+      <a href="/kategori/gundem" class="tamu-nav" data-kategori="Gündem" style="padding:13px 16px;font-size:16px;font-weight:600;text-decoration:none;color:#262820;background:#C0C78C;border-bottom:3px solid #262820">Gündem</a>
+      <a href="/kategori/tarih" class="tamu-nav" data-kategori="Tarih" style="padding:13px 16px;font-size:16px;font-weight:600;text-decoration:none;color:#262820;background:transparent;border-bottom:3px solid transparent">Tarih</a>
+      <a href="/kategori/siyaset" class="tamu-nav" data-kategori="Siyaset" style="padding:13px 16px;font-size:16px;font-weight:600;text-decoration:none;color:#262820;background:transparent;border-bottom:3px solid transparent">Siyaset</a>
+      <a href="/kategori/yasam" class="tamu-nav" data-kategori="Yaşam" style="padding:13px 16px;font-size:16px;font-weight:600;text-decoration:none;color:#262820;background:transparent;border-bottom:3px solid transparent">Yaşam</a>
+      <a href="/dosyalar" style="padding:13px 16px;font-size:16px;font-weight:600;text-decoration:none;color:#262820">Dosyalar</a>
+      <a href="/topluluk" style="padding:13px 16px;font-size:16px;font-weight:600;text-decoration:none;color:#262820;border-left:1px solid #DED8B8">Topluluk</a>
+    </div>
+  </nav>
+</header>
+
+<main id="icerik" style="background:#FEFAE0;display:block">
+
+<div style="padding:30px 3% 0">
+  <div style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+
+    <!-- MANSET -->
+    <article style="flex:1 1 540px;min-width:0">
+      <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px">
+        <span style="display:inline-block;padding:3px 10px;border:1px solid #262820;font-size:13px;font-weight:600;letter-spacing:.03em">Tarih</span>
+        <span style="display:inline-block;padding:3px 10px;background:#C0C78C;border:1px solid #8D9A5B;font-size:13px;font-weight:600">Açıklayıcı İçerik</span>
+        <span style="font-size:13.5px;color:#5C5F50">Dosya: Kent hafızası</span>
+      </div>
+      <h1 style="margin:0;font-size:50px;line-height:1.14;font-weight:700;letter-spacing:-.015em;text-wrap:pretty">
+        <a href="/yazi/bir-kentin-hafizasi" style="color:#262820;text-decoration:none">Bir kentin hafızası: Mahalle isimleri bize ne anlatır?</a>
+      </h1>
+      <p style="margin:16px 0 0;font-size:20px;line-height:1.6;color:#3C3F33;max-width:62ch">İdari kararlar, göç dalgaları ve gündelik alışkanlıklar bir mahallenin adını nasıl değiştirir? Arşiv kayıtları ve sözlü tarih anlatıları üzerinden bir okuma.</p>
+
+      <!-- MANSET_GORSEL -->
+      <div style="margin:18px 0 0;background:repeating-linear-gradient(135deg,#EDE7CB 0 10px,#E6DFBE 10px 20px);border:1px solid #DED8B8;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px">
+        <span style="font:500 12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:#6E5437">GÖRSEL YER TUTUCU<br>belgesel fotoğraf — 16:9</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px;font-size:14px;color:#5C5F50;line-height:1.5">
+        <span>Fotoğraf altı yazısı yer tutucu.</span>
+        <span style="color:#6E5437">Görsel künyesi: kurum/fotoğrafçı yer tutucu</span>
+      </div>
+
+      <!-- AI_GORSEL_UYARISI: yapay zeka görseli kullanılmadığında bu blok kaldırılır -->
+      <div class="tamu-ai-not" style="display:flex;gap:10px;align-items:flex-start;margin:8px 0 0;padding:10px 14px;background:#F0E6CE;border-top:2px solid #6E5437;border-bottom:1px solid #D8CBA6">
+        <span style="flex:none;font-size:13px;font-weight:700;letter-spacing:.08em;color:#6E5437;border:1px solid #6E5437;padding:1px 7px;line-height:1.5">AI</span>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:#3C3F33;font-style:italic">Not: Henüz olay yeni olduğu / elimizde teyitli görsel bulunmadığı için bu görsel yapay zeka (AI) tarafından tasvir amacıyla üretilmiştir.</p>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:16px;padding-top:14px;border-top:1px solid #DED8B8;font-size:15px;color:#3C3F33">
+        <a href="/yazarlar" style="font-weight:600">Yazar adı yer tutucu</a>
+        <span style="color:#5C5F50">21 Eylül 2026, 09:20</span>
+        <span style="color:#5C5F50">12 dakika okuma</span>
+        <span style="color:#6E5437">Kaynakça: 4 kayıt</span>
+      </div>
+    </article>
+
+    <aside style="flex:1 1 290px;min-width:0;border-top:2px solid #262820;padding-top:12px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+        <h2 style="margin:0;font-size:21px;font-weight:700;letter-spacing:.01em">Son Haberler</h2>
+        <a href="/son-haberler" style="font-size:14px">Tümü</a>
+      </div>
+
+      <!-- SON_HABERLER -->
+      <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #DED8B8">
+        <span style="font-size:14px;font-variant-numeric:tabular-nums;color:#5C5F50;min-width:42px">14:35</span>
+        <div style="min-width:0">
+          <div style="font-size:12.5px;letter-spacing:.05em;color:#6E5437;margin-bottom:3px">Gündem</div>
+          <a href="/yazi/yaya-duzenlemesi-ikinci-etap" style="font-size:17px;line-height:1.35;font-weight:500;color:#262820;text-decoration:none;border-bottom:1px solid #C0C78C">Kent merkezindeki yaya düzenlemesi için ikinci etap kararı</a>
+          <span style="display:inline-block;margin-top:6px;padding:1px 7px;border:1px solid #6E5437;color:#6E5437;font-size:12px;font-weight:600">↻ Güncellendi</span>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #DED8B8">
+        <span style="font-size:14px;font-variant-numeric:tabular-nums;color:#5C5F50;min-width:42px">13:02</span>
+        <div style="min-width:0">
+          <div style="font-size:12.5px;letter-spacing:.05em;color:#6E5437;margin-bottom:3px">Siyaset</div>
+          <a href="/yazi/komisyon-takvim-tartismasi" style="font-size:17px;line-height:1.35;font-weight:500;color:#262820;text-decoration:none;border-bottom:1px solid #C0C78C">Komisyon görüşmelerinde takvim tartışması</a>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #DED8B8">
+        <span style="font-size:14px;font-variant-numeric:tabular-nums;color:#5C5F50;min-width:42px">11:48</span>
+        <div style="min-width:0">
+          <div style="font-size:12.5px;letter-spacing:.05em;color:#6E5437;margin-bottom:3px">Yaşam</div>
+          <a href="/yazi/semt-pazarlari-saha-notlari" style="font-size:17px;line-height:1.35;font-weight:500;color:#262820;text-decoration:none;border-bottom:1px solid #C0C78C">Semt pazarlarında fiyat farkları üzerine saha notları</a>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #DED8B8">
+        <span style="font-size:14px;font-variant-numeric:tabular-nums;color:#5C5F50;min-width:42px">10:15</span>
+        <div style="min-width:0">
+          <div style="font-size:12.5px;letter-spacing:.05em;color:#6E5437;margin-bottom:3px">Tarih</div>
+          <a href="/yazi/gazete-arsivleri" style="font-size:17px;line-height:1.35;font-weight:500;color:#262820;text-decoration:none;border-bottom:1px solid #C0C78C">Gazete arşivlerinden gündelik hayatın izleri</a>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #DED8B8">
+        <span style="font-size:14px;font-variant-numeric:tabular-nums;color:#5C5F50;min-width:42px">09:30</span>
+        <div style="min-width:0">
+          <div style="font-size:12.5px;letter-spacing:.05em;color:#6E5437;margin-bottom:3px">Gündem</div>
+          <a href="/yazi/meclis-gundemi-uc-baslik" style="font-size:17px;line-height:1.35;font-weight:500;color:#262820;text-decoration:none;border-bottom:1px solid #C0C78C">Belediye meclisi gündemine alınan üç başlık</a>
+          <span style="display:inline-block;margin-top:6px;padding:1px 7px;border:1px solid #6E5437;color:#6E5437;font-size:12px;font-weight:600">↻ Güncellendi</span>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #DED8B8">
+        <span style="font-size:14px;font-variant-numeric:tabular-nums;color:#5C5F50;min-width:42px">08:05</span>
+        <div style="min-width:0">
+          <div style="font-size:12.5px;letter-spacing:.05em;color:#6E5437;margin-bottom:3px">Siyaset</div>
+          <a href="/yazi/yasa-teklifi-nasil-yasalasir" style="font-size:17px;line-height:1.35;font-weight:500;color:#262820;text-decoration:none;border-bottom:1px solid #C0C78C">Bir yasa teklifi nasıl yasalaşır?</a>
+        </div>
+      </div>
+      <!-- /SON_HABERLER -->
+    </aside>
+  </div>
+
+  <!-- DESTEK_KARTLARI -->
+  <div style="margin-top:36px;border-top:1px solid #262820;padding-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px">
+    <article style="min-width:0">
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:9px">
+        <span style="font-size:12.5px;letter-spacing:.05em;color:#6E5437">SİYASET</span>
+        <span style="width:3px;height:3px;background:#B99470;border-radius:50%"></span>
+        <span style="font-size:12.5px;font-weight:600">Analiz</span>
+      </div>
+      <h3 style="margin:0;font-size:24px;line-height:1.25;font-weight:600;text-wrap:pretty">
+        <a href="/yazi/yasa-teklifi-nasil-yasalasir" style="color:#262820;text-decoration:none">Bir yasa teklifi nasıl yasalaşır?</a>
+      </h3>
+      <p style="margin:10px 0 0;font-size:17px;line-height:1.6;color:#3C3F33">Komisyondan genel kurula: sürecin adım adım açıklaması ve en sık yanlış anlaşılan noktalar.</p>
+      <div style="margin-top:10px;font-size:14px;color:#5C5F50">Yazar adı yer tutucu · 20 Eylül 2026 · 9 dk</div>
+    </article>
+    <article style="min-width:0">
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:9px">
+        <span style="font-size:12.5px;letter-spacing:.05em;color:#6E5437">YAŞAM</span>
+        <span style="width:3px;height:3px;background:#B99470;border-radius:50%"></span>
+        <span style="font-size:12.5px;font-weight:600">Haber</span>
+      </div>
+      <h3 style="margin:0;font-size:24px;line-height:1.25;font-weight:600;text-wrap:pretty">
+        <a href="/yazi/semt-pazarlari-saha-notlari" style="color:#262820;text-decoration:none">Semt pazarlarında fiyat farkları üzerine saha notları</a>
+      </h3>
+      <p style="margin:10px 0 0;font-size:17px;line-height:1.6;color:#3C3F33">Aynı kentin üç pazarında yapılan gözlemler; örnek veri ile hazırlanmış tasarım içeriğidir.</p>
+      <div style="margin-top:10px;font-size:14px;color:#5C5F50">Yazar adı yer tutucu · 21 Eylül 2026 · 6 dk</div>
+    </article>
+    <article style="min-width:0">
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:9px">
+        <span style="font-size:12.5px;letter-spacing:.05em;color:#6E5437">TARİH</span>
+        <span style="width:3px;height:3px;background:#B99470;border-radius:50%"></span>
+        <span style="font-size:12.5px;font-weight:600">Açıklayıcı İçerik</span>
+      </div>
+      <h3 style="margin:0;font-size:24px;line-height:1.25;font-weight:600;text-wrap:pretty">
+        <a href="/yazi/gazete-arsivleri" style="color:#262820;text-decoration:none">Gazete arşivlerinden gündelik hayatın izleri</a>
+      </h3>
+      <p style="margin:10px 0 0;font-size:17px;line-height:1.6;color:#3C3F33">İlanlar, duyurular ve okur mektupları bir dönemin gündelik diline nasıl ışık tutar?</p>
+      <div style="margin-top:10px;font-size:14px;color:#5C5F50">Yazar adı yer tutucu · 19 Eylül 2026 · 11 dk</div>
+    </article>
+  </div>
+  <!-- /DESTEK_KARTLARI -->
+</div>
+
+<!-- GUNUN_OZETI_MODULU -->
+<section style="margin-top:44px;background:#C0C78C;border-top:1px solid #262820;border-bottom:1px solid #262820;padding:34px 3%">
+  <div style="display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start">
+    <div style="flex:1 1 300px;min-width:0">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;margin-bottom:8px">21 EYLÜL 2026 · OTOMATİK DERLEME</div>
+      <h2 style="margin:0;font-size:30px;font-weight:700;letter-spacing:-.01em">Günün Özeti / Tarihte Bugün</h2>
+      <p style="margin:12px 0 0;font-size:17px;line-height:1.65;max-width:46ch">Bu modül her sabah otomatik derlenir: günün öne çıkan yazıları ve arşivden bugüne denk gelen kayıtlar. Derleme editoryal bir yorum içermez; her madde kendi kaynağına bağlanır.</p>
+      <a href="/son-haberler" style="display:inline-block;margin-top:14px;font-size:16px;font-weight:600;color:#262820">Tüm akışı görün →</a>
+    </div>
+    <div style="flex:2 1 420px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px">
+      <article>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px">
+          <span style="padding:2px 9px;background:#FEFAE0;border:1px solid #262820;font-size:12px;font-weight:700;letter-spacing:.04em">GÜNÜN ÖZETİ</span>
+          <span style="font-size:12.5px;letter-spacing:.05em">OTOMATİK</span>
+        </div>
+        <h3 style="margin:0 0 10px;font-size:22px;line-height:1.3;font-weight:600">Bugün öne çıkanlar</h3>
+        <div id="gunun-ozeti" style="display:flex;flex-direction:column;gap:9px;font-size:16px;line-height:1.5">
+          <!-- GUNUN_OZETI -->
+        </div>
+      </article>
+      <article>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px">
+          <span style="padding:2px 9px;background:#B99470;border:1px solid #6E5437;font-size:12px;font-weight:700;letter-spacing:.04em">TARİHTE BUGÜN</span>
+          <span style="font-size:12.5px;letter-spacing:.05em">ARŞİVDEN</span>
+        </div>
+        <div id="tarihte-bugun">
+          <!-- TARIHTE_BUGUN -->
+          <h3 style="margin:0;font-size:22px;line-height:1.3;font-weight:600"><a href="/yazi/adlandirma-kararlari" style="color:#262820;text-decoration:none;border-bottom:1px solid #6E5437">1927: Adlandırma yetkisi yerel kurullara veriliyor</a></h3>
+          <p style="margin:9px 0 0;font-size:16px;line-height:1.6">Arşivden eşleşen kayıt. <a href="/kaynak/meclis-tutanagi">Kaynak kaydı</a> · <span style="color:#3C3F33">tarih eşleşmesi otomatiktir, tarihsel önem iddiası içermez.</span></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- /GUNUN_OZETI_MODULU -->
+
+<section style="padding:40px 3%;border-bottom:1px solid #DED8B8">
+  <div style="display:flex;flex-wrap:wrap;gap:36px;align-items:stretch">
+    <div style="flex:1 1 320px;min-width:0;background:repeating-linear-gradient(135deg,#EDE7CB 0 10px,#E6DFBE 10px 20px);border:1px solid #B99470;min-height:260px;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px">
+      <span style="font:500 12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:#6E5437">DOSYA GÖRSELİ YER TUTUCU<br>arşiv materyali / harita</span>
+    </div>
+    <div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;justify-content:center">
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+        <span style="padding:3px 10px;background:#B99470;border:1px solid #6E5437;font-size:13px;font-weight:700;letter-spacing:.04em">DOSYA</span>
+        <span style="font-size:14px;color:#5C5F50">14 yazı · 3 zaman çizelgesi · 22 kaynak</span>
+      </div>
+      <h2 style="margin:0;font-size:34px;line-height:1.15;font-weight:700;letter-spacing:-.01em;text-wrap:pretty">Kamusal alanların dönüşümü üzerine bir tartışma</h2>
+      <p style="margin:14px 0 0;font-size:18px;line-height:1.65;color:#3C3F33;max-width:58ch">Meydanlar, parklar ve çarşılar hangi kararlarla değişti? Dosya, konuyu takip etmek isteyen okur için bir okuma yolu öneriyor.</p>
+      <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:10px">
+        <a href="/dosya/kamusal-alanlar" style="padding:11px 18px;background:#A6B37D;border:1px solid #262820;color:#262820;font-size:16px;font-weight:600;text-decoration:none">Buradan başlayın</a>
+        <a href="/dosya/kamusal-alanlar#takip" style="padding:11px 18px;border:1px solid #262820;color:#262820;font-size:16px;font-weight:600;text-decoration:none">Dosyayı takip et</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:40px 3%;display:flex;flex-wrap:wrap;gap:40px">
+  <div style="flex:1.4 1 420px;min-width:0">
+    <h2 style="margin:0 0 18px;font-size:28px;font-weight:700;border-bottom:2px solid #262820;padding-bottom:8px">Analiz</h2>
+    <article style="padding-bottom:20px;border-bottom:1px solid #DED8B8">
+      <span style="display:inline-block;padding:2px 9px;background:#C0C78C;border:1px solid #8D9A5B;font-size:12.5px;font-weight:600;margin-bottom:10px">Analiz</span>
+      <h3 style="margin:0;font-size:26px;line-height:1.25;font-weight:600"><a href="/yazi/yasa-teklifi-nasil-yasalasir" style="color:#262820;text-decoration:none">Bir yasa teklifi nasıl yasalaşır?</a></h3>
+      <p style="margin:10px 0 0;font-size:17.5px;line-height:1.65;color:#3C3F33">Komisyon aşamalarından genel kurula, sürecin adım adım açıklaması ve sürecin en sık yanlış anlaşılan noktaları.</p>
+      <div style="margin-top:10px;font-size:14px;color:#5C5F50">Yazar adı yer tutucu · 20 Eylül 2026 · 9 dk</div>
+    </article>
+    <article style="padding-top:20px">
+      <span style="display:inline-block;padding:2px 9px;background:#C0C78C;border:1px solid #8D9A5B;font-size:12.5px;font-weight:600;margin-bottom:10px">Söyleşi</span>
+      <h3 style="margin:0;font-size:26px;line-height:1.25;font-weight:600"><a href="/yazi/kent-bellegi-soylesi" style="color:#262820;text-decoration:none">“Kent belleği yalnızca binalarda değil, alışkanlıklarda saklı”</a></h3>
+      <p style="margin:10px 0 0;font-size:17.5px;line-height:1.65;color:#3C3F33">Örnek söyleşi metni yer tutucu: konuşmacı bilgileri tasarım amaçlıdır.</p>
+      <div style="margin-top:10px;font-size:14px;color:#5C5F50">Söyleşi: yazar adı yer tutucu · 19 Eylül 2026</div>
+    </article>
+  </div>
+  <div style="flex:1 1 280px;min-width:0">
+    <h2 style="margin:0 0 18px;font-size:28px;font-weight:700;border-bottom:2px solid #6E5437;padding-bottom:8px">Görüş</h2>
+    <div style="background:#F6F1D8;border:1px solid #B99470;padding:18px">
+      <span style="display:inline-block;padding:2px 10px;background:#B99470;border:1px solid #6E5437;font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:10px">GÖRÜŞ</span>
+      <h3 style="margin:0;font-size:22px;line-height:1.3;font-weight:600"><a href="/yazi/katilim-neden-zayif" style="color:#262820;text-decoration:none">Yerel karar süreçlerinde katılım neden zayıf kalıyor?</a></h3>
+      <div style="display:flex;gap:10px;align-items:center;margin-top:12px">
+        <span style="width:34px;height:34px;border-radius:50%;background:repeating-linear-gradient(135deg,#EDE7CB 0 6px,#E0D9B8 6px 12px);border:1px solid #B99470;display:block"></span>
+        <span style="font-size:14px;line-height:1.4">Yazar adı yer tutucu<br><span style="color:#5C5F50">Görüş yazarı</span></span>
+      </div>
+      <p style="margin:14px 0 0;font-size:14.5px;line-height:1.55;color:#3C3F33;border-top:1px solid #DED8B8;padding-top:12px">Görüş yazılarındaki yorumlar yazara aittir. Olgusal iddialar yine kaynak gerektirir.</p>
+    </div>
+  </div>
+</section>
+
+<section style="margin:0 3% 44px;border:1px solid #6E5437">
+  <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:#B99470;padding:10px 18px;border-bottom:1px solid #6E5437">
+    <span style="font-size:15px;font-weight:700;letter-spacing:.04em">TOPLULUK · ÜYE KATKISI</span>
+    <span style="font-size:13.5px">Bu bölümdeki içerikler yayın kurulu tarafından onaylanmamıştır.</span>
+  </div>
+  <div style="padding:18px">
+    <!-- TOPLULUK_KONULARI -->
+    <div style="display:flex;flex-wrap:wrap;gap:10px 16px;align-items:baseline;padding:12px 0;border-bottom:1px solid #DED8B8">
+      <a href="/topluluk/konu/mahalle-adi-degisiklikleri" style="flex:1 1 260px;font-size:18px;font-weight:600;color:#262820;text-decoration:none;border-bottom:1px solid #C0C78C">Mahalle adı değişiklikleri hangi durumlarda gerçekten benimsendi?</a>
+      <span style="font-size:14px;color:#5C5F50">Kent ve mekân</span>
+      <span style="font-size:14px;color:#5C5F50">18 yanıt</span>
+      <span style="font-size:14px;color:#5C5F50">13:10</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px 16px;align-items:baseline;padding:12px 0;border-bottom:1px solid #DED8B8">
+      <a href="/topluluk/konu/meclis-tutanaklari-erisim" style="flex:1 1 260px;font-size:18px;font-weight:600;color:#262820;text-decoration:none;border-bottom:1px solid #C0C78C">Yerel meclis tutanaklarına erişim deneyimleriniz</a>
+      <span style="font-size:14px;color:#5C5F50">Kaynak ve belge</span>
+      <span style="font-size:14px;color:#5C5F50">24 yanıt</span>
+      <span style="font-size:14px;color:#5C5F50">Dün, 20:05</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px 16px;align-items:baseline;padding:12px 0;border-bottom:1px solid #DED8B8">
+      <a href="/topluluk/konu/arsiv-taramasi" style="flex:1 1 260px;font-size:18px;font-weight:600;color:#262820;text-decoration:none;border-bottom:1px solid #C0C78C">Arşiv taraması yaparken hangi kataloglardan başlıyorsunuz?</a>
+      <span style="font-size:14px;color:#5C5F50">Yöntem</span>
+      <span style="font-size:14px;color:#5C5F50">7 yanıt</span>
+      <span style="font-size:14px;color:#5C5F50">11:42</span>
+    </div>
+    <!-- /TOPLULUK_KONULARI -->
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:16px">
+      <a href="/topluluk" style="padding:11px 18px;background:#A6B37D;border:1px solid #262820;font-size:16px;font-weight:600;color:#262820;text-decoration:none">Topluluğa git</a>
+      <a href="/topluluk/yeni" style="padding:11px 18px;border:1px solid #262820;font-size:16px;font-weight:600;color:#262820;text-decoration:none">Yeni konu aç</a>
+    </div>
+  </div>
+</section>
+
+<section style="border-top:1px solid #262820;border-bottom:1px solid #DED8B8;padding:36px 3%">
+  <h2 style="margin:0 0 6px;font-size:26px;font-weight:700">Kaynak yaklaşımımız</h2>
+  <p style="margin:0 0 22px;font-size:17px;line-height:1.6;color:#3C3F33;max-width:70ch">Kaynak göstermek bir doğruluk garantisi değildir. Okurun kendi değerlendirmesini yapabilmesi için hangi iddianın neye dayandığını görünür kılarız.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:28px">
+    <div style="border-top:2px solid #A6B37D;padding-top:12px">
+      <h3 style="margin:0 0 6px;font-size:18px;font-weight:600">İddia ve kaynak eşleşir</h3>
+      <p style="margin:0;font-size:16px;line-height:1.6;color:#3C3F33">Metin içi numara, o cümledeki iddiayı destekleyen kayda gider; kaynağın hangi bölümü kullanıldığı belirtilir.</p>
+    </div>
+    <div style="border-top:2px solid #B99470;padding-top:12px">
+      <h3 style="margin:0 0 6px;font-size:18px;font-weight:600">Olgu ile yorum ayrılır</h3>
+      <p style="margin:0;font-size:16px;line-height:1.6;color:#3C3F33">Görüş içeriği kalıcı bir etiketle işaretlenir. Topluluk gönderileri hiçbir zaman yayın kurulu içeriği gibi görünmez.</p>
+    </div>
+    <div style="border-top:2px solid #6E5437;padding-top:12px">
+      <h3 style="margin:0 0 6px;font-size:18px;font-weight:600">Değişiklikler kayıt altındadır</h3>
+      <p style="margin:0;font-size:16px;line-height:1.6;color:#3C3F33">Rutin güncelleme ile esaslı düzeltme ayrı gösterilir; önceki hata silinmez, not edilir.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:32px 3% 44px;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between">
+  <div style="flex:1 1 320px;min-width:0">
+    <h2 style="margin:0 0 8px;font-size:24px;font-weight:700">Haftalık bülten</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:#3C3F33;max-width:52ch">Haftanın öne çıkan yazıları ve dosya güncellemeleri. Bülten aboneliği hesap oluşturmayı gerektirmez.</p>
+  </div>
+  <form action="/bulten" method="post" style="flex:1 1 320px;min-width:0;display:flex;flex-wrap:wrap;gap:10px">
+    <label for="bulten" style="flex:1 1 100%;font-size:14px;color:#5C5F50">E-posta adresiniz</label>
+    <input id="bulten" name="eposta" type="email" placeholder="ornek@eposta.com" style="flex:1 1 200px;min-width:0;padding:12px;font-size:16px;border:1px solid #262820;background:#FEFAE0;color:#262820">
+    <button type="submit" style="padding:12px 20px;background:#A6B37D;border:1px solid #262820;font-size:16px;font-weight:600;color:#262820;cursor:pointer">Abone ol</button>
+  </form>
+</section>
+
+</main>
+
+<footer style="background:#262820;color:#FEFAE0;padding:36px 3% 28px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px">
+    <div>
+      <div style="font-size:30px;font-weight:700;letter-spacing:.14em;margin-bottom:10px">TAMU</div>
+      <p style="margin:0;font-size:14.5px;line-height:1.6;color:#D8D3B4">Kaynağıyla birlikte yayın. Bu sayfadaki tüm içerikler örnektir.</p>
+    </div>
+    <div>
+      <h2 style="margin:0 0 10px;font-size:14px;font-weight:700;letter-spacing:.06em;color:#C0C78C">YAYIN</h2>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:15px">
+        <a href="/hakkimizda" style="color:#FEFAE0">Hakkımızda</a>
+        <a href="/yayin-ilkeleri" style="color:#FEFAE0">Yayın İlkeleri</a>
+        <a href="/kaynaklandirma" style="color:#FEFAE0">Kaynaklandırma Yöntemimiz</a>
+        <a href="/seffaflik" style="color:#FEFAE0">Şeffaflık</a>
+        <a href="/duzeltme-politikasi" style="color:#FEFAE0">Düzeltme Politikası</a>
+      </div>
+    </div>
+    <div>
+      <h2 style="margin:0 0 10px;font-size:14px;font-weight:700;letter-spacing:.06em;color:#C0C78C">TOPLULUK</h2>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:15px">
+        <a href="/topluluk" style="color:#FEFAE0">Topluluk ana sayfa</a>
+        <a href="/son-haberler" style="color:#FEFAE0">Son haberler</a>
+        <a href="/topluluk/kurallar" style="color:#FEFAE0">Topluluk Kuralları</a>
+        <a href="/topluluk/yeni" style="color:#FEFAE0">Yeni konu aç</a>
+        <a href="/bildirimlerim" style="color:#FEFAE0">Bildirimlerim</a>
+      </div>
+    </div>
+    <div>
+      <h2 style="margin:0 0 10px;font-size:14px;font-weight:700;letter-spacing:.06em;color:#C0C78C">İLETİŞİM</h2>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:15px">
+        <a href="/iletisim" style="color:#FEFAE0">İletişim</a>
+        <a href="/konu-oner" style="color:#FEFAE0">Haber / Konu Öner</a>
+        <a href="/katkida-bulun" style="color:#FEFAE0">Katkıda Bulun</a>
+        <a href="/sss" style="color:#FEFAE0">Sık Sorulan Sorular</a>
+      </div>
+    </div>
+    <div>
+      <h2 style="margin:0 0 10px;font-size:14px;font-weight:700;letter-spacing:.06em;color:#C0C78C">YASAL</h2>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:15px">
+        <a href="/gizlilik" style="color:#FEFAE0">Gizlilik Politikası</a>
+        <a href="/kullanim-kosullari" style="color:#FEFAE0">Kullanım Koşulları</a>
+        <a href="/cerez-tercihleri" style="color:#FEFAE0">Çerez Tercihleri</a>
+        <a href="/erisilebilirlik" style="color:#FEFAE0">Erişilebilirlik</a>
+      </div>
+    </div>
+  </div>
+  <p style="margin:28px 0 0;padding-top:16px;border-top:1px solid #4A4C40;font-size:13.5px;line-height:1.6;color:#D8D3B4">Politika ve hukuk metinleri taslaktır ve yayın sahibi tarafından incelenmelidir. İşletmeci kuruluş, adres ve yasal taahhütler bu sayfada tanımlanmamıştır.</p>
+</footer>
+
+</div>
+
+<script>
+/* Ana menü sekme durumu: sunucu tarafında sayfa üretiliyorsa bu blok kaldırılabilir. */
+document.querySelectorAll('.tamu-nav').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelectorAll('.tamu-nav').forEach(function (n) {
+      n.style.background = 'transparent';
+      n.style.borderBottom = '3px solid transparent';
+    });
+    el.style.background = '#C0C78C';
+    el.style.borderBottom = '3px solid #262820';
+  });
+});
+</script>
+
+</body>
+</html>
