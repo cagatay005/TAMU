@@ -2,25 +2,25 @@ name: TAMU Günlük Otomasyon
 
 on:
   schedule:
-    - cron: '0 3 * * *' # Türkiye saatiyle her sabah 06:00'da çalışır
-  workflow_dispatch: # İstediğiniz zaman manuel çalıştırma butonu ekler
+    - cron: '0 3 * * *'
+  workflow_dispatch:
 
 jobs:
   icerik_guncelle:
     runs-on: ubuntu-latest
     steps:
       - name: Depoyu Klonla
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Python Ortamını Kur
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
       - name: Gerekli Kütüphaneleri Yükle
-        run: pip install google-generativeai
+        run: pip install google-genai
 
-      - name: Python Motorunu (Gemini API) Çalıştır
+      - name: Python Motorunu Çalıştır
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python update_news.py
