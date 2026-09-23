@@ -6,9 +6,9 @@ import xml.etree.ElementTree as ET
 from google import genai
 from datetime import datetime
 
-# --- 1. GERÇEK GÜNCEL HABERLERİ ÇEKME (CANLI RSS MOTORU) ---
+# --- 1. CANLI RSS HABERLERİNİ ÇEKME MOTORU ---
 def guncel_haberleri_al():
-    rss_url = "https://www.ntv.com.tr/gundem.rss" # Güvenilir ve hızlı ulusal haber akışı
+    rss_url = "https://www.ntv.com.tr/gundem.rss"
     haber_html = ""
     try:
         req = urllib.request.Request(rss_url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -16,7 +16,7 @@ def guncel_haberleri_al():
             xml_data = response.read()
         root = ET.fromstring(xml_data)
         
-        # En güncel 5 haberi al ve Claude'un tasarımına uygun HTML'e çevir
+        # En güncel 5 haberi al ve HTML formatına dök
         for item in root.findall('./channel/item')[:5]:
             baslik = item.find('title').text
             link = item.find('link').text
@@ -33,9 +33,9 @@ def guncel_haberleri_al():
         return haber_html
     except Exception as e:
         print(f"RSS Çekme Hatası: {e}")
-        return "<!-- Güncel haberler şu an çekilemiyor -->"
+        return "<div style='padding:10px; color:#6E5437;'>Canlı haber akışı şu an güncellenemiyor.</div>"
 
-# --- 2. TARİHTE BUGÜN (GEMINI YAPAY ZEKA MOTORU) ---
+# --- 2. GEMINI TARİHTE BUGÜN MOTORU ---
 api_key = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=api_key)
 aktif_model = "gemini-3.6-flash"
@@ -62,14 +62,14 @@ for deneme in range(max_deneme):
         else:
             tarihte_bugun_icerik = "<ul><li><em>Şu an yapay zeka sunucularındaki yoğunluk nedeniyle veri çekilememektedir.</em></li></ul>"
 
-# --- 3. HTML DOSYASINI GÜNCELLEME VE KAYDETME ---
+# --- 3. HTML DOSYASINI GÜNCELLEME ---
 dosya_adi = "TAMU.html" 
 
 try:
     with open(dosya_adi, "r", encoding="utf-8") as f:
         html = f.read()
         
-    # Tarihte Bugün bloğunu korumalı şekilde değiştir
+    # Tarihte Bugün alanını güncelle
     html = re.sub(
         r'(<!-- GUNUN_OZETI -->)(.*?)(<!-- /GUNUN_OZETI -->)', 
         rf'\g<1>\n{tarihte_bugun_icerik}\n\g<3>', 
@@ -77,7 +77,7 @@ try:
         flags=re.DOTALL
     )
     
-    # Canlı Haberler bloğunu korumalı şekilde değiştir
+    # Son Haberler alanını güncelle
     yeni_son_haberler = guncel_haberleri_al()
     html = re.sub(
         r'(<!-- SON_HABERLER -->)(.*?)(<!-- /SON_HABERLER -->)', 
@@ -88,7 +88,7 @@ try:
         
     with open(dosya_adi, "w", encoding="utf-8") as f:
         f.write(html)
-    print("TAMU başarıyla güncellendi! (Yapay Zeka + Canlı RSS)")
+    print("TAMU başarıyla güncellendi! (Hibrit Sistem Aktif)")
             
 except FileNotFoundError:
     print(f"Hata: {dosya_adi} bulunamadı.")
