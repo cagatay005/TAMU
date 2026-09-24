@@ -51,19 +51,22 @@ api_key = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=api_key)
 aktif_model = "gemini-3.6-flash"
 
-bugun = datetime.now().strftime("%d %B")
-prompt = f"Bugün {bugun}. Tarihte bugün Türkiye ve dünyada yaşanmış en önemli 3 olayı tarafsız ve gazetecilik diliyle özetle. Sadece HTML formatında <ul><li>...</li></ul> listesi olarak ver. Görsel kullanamadığımız için betimleyici ol."
+# Sistemin çalıştığı konumun yerel saatini dinamik olarak alır
+bugun = datetime.now().astimezone().strftime("%d %B")
+
+# Sadece "dünyada" diyerek küresel olaylara odaklanıyoruz
+prompt = f"Bugün {bugun}. Tarihte bugün dünyada yaşanmış en önemli 3 olayı tarafsız ve gazetecilik diliyle özetle. Sadece HTML formatında <ul><li>...</li></ul> listesi olarak ver. Görsel kullanamadığımız için betimleyici ol."
 
 tarihte_bugun_icerik = "<ul><li><em>Şu an yapay zeka sunucularındaki yoğunluk nedeniyle veri çekilememektedir.</em></li></ul>"
 for deneme in range(3):
     try:
         response = client.models.generate_content(model=aktif_model, contents=prompt)
         tarihte_bugun_icerik = response.text
-        print("Tarihte Bugün başarıyla üretildi.")
+        print(f"Tarihte Bugün ({bugun}) başarıyla üretildi.")
         break  
     except Exception as e:
         print(f"Deneme {deneme + 1} başarısız: {e}")
-        if deneme < 2: time.sleep(15) # Hızlı test edebilmen için süreyi tekrar 15 saniyeye çektim
+        if deneme < 2: time.sleep(15)
         
 # --- 2. CANLI RSS HABERLERİ ---
 yeni_haberler = guncel_haberleri_al()
